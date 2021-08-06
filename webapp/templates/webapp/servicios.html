@@ -1,0 +1,59 @@
+{% extends "webapp/base.html" %}  
+
+{% load static %} 
+
+{% block content %} 
+<div class="container">
+    <div style="margin-top: 70px;" class="col mb-3" >
+        <div class="row ">
+          <div class="col-md-5">
+            <img src="{% static 'img/doctora.jpg' %}" style="margin-top: 70px;" class="img-fluid rounded " alt="doctora">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body  ">
+              <h3 class="card-title ">Nuestros Servicios</h3>
+              <p class="card-text  ">Atendemos todo tipo de problemas relacionados con la salud visual y la calidad de la visión. La asistencia incluye servicios optométricos, relacionados con los defectos de la refracción, así como atención oftalmológica.
+
+            </p>
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="card " style="height: 100%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Revisión Optométrica</h5>
+                      <ul>
+                        <li>Determinación de la agudeza visual</li>
+                        <li>Exploración de la motilidad ocular</li>
+                        <li>Refracción Objetiva y Subjetiva</li>
+                        <li>Visión de lejos y de cerca</li>
+                        <li>Visión binocular</li>
+                        </ul> 
+                        <div class="card-footer">  <a href="#" class="btn btn-outline-dark ">Mas info +</a>
+                   </div> </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card" style="height: 100%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Revisión Oftalmológica</h5>
+                     <ul>
+                         <li>Exploración de polo anterior con lámpara hendidura</li>
+                         <li>Tonometría</li>
+                         <li>Exploración de fondo de ojo bajo cicloplejia (dilatación de pupila)</li>
+                         <li>Exploraciones complementarias específicas en función de las necesidades del paciente.</li>
+                        
+                     </ul>
+                     <div class="card-footer"> 
+                                         <a href="#" class="btn btn-outline-dark ">Mas info +</a>
+                                        </div> 
+                                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+{% endblock %} 

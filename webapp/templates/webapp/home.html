@@ -1,0 +1,16 @@
+{% extends "webapp/base.html" %}  
+
+{% load static %} 
+
+{% block content %} 
+<div class="container">
+<div class="card mb-3">
+    <img src="{% static 'img/clinica.png' %}" class="card-img-top"  alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Presentación</h5>
+      <p class="card-text">La Clínica Optométrica de la Universidad de Alicante es un Centro docente y asistencial dedicado al tratamiento de los problemas de visión. La Clínica presta servicios desde el año 2001, y se encuentra ubicada en el edificio de Óptica de la Facultad de Ciencias.</p>
+      <a class="card-text"><small class="text-muted">Mas información +</small></a>
+    </div>
+  </div>
+</div>
+{% endblock %} 

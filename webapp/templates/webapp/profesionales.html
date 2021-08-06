@@ -1,0 +1,28 @@
+{% extends "webapp/base.html" %}  
+
+{% load static %} 
+
+{% block content %} 
+
+<div class="container " >
+    <div class="row "style="margin: 20px;">
+      
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Equipo Profesional</h5>
+            <ul>
+                <li>Dirección Servicio de Prevención: Dr. Miguel Ángel Sarabia Romero</li>
+                <li>Coordinador Clínica Optométrica: Ángel García Muñoz</li>
+                <li>Oftalmóloga: Dra. Concepción de la Vega Galiana</li>
+                <li>Optometrista: Alberto López Navarro</li>
+                <li>Gestora: Maria Dolores Domenech Durá</li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'img/equipo.jpg' %}" class="img-fluid rounded-start" alt="...">
+      </div>
+    </div>
+  </div>
+
+{% endblock %} 
