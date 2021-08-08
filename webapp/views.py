@@ -11,8 +11,11 @@ def servicios(request):
 
 def productos(request):
     categorias = Categoria.objects.all()
+    productos = Productos.objects.all()
+
+    context = {'categorias': categorias, 'productos': productos}
     
-    return render(request, 'webapp/productos.html', {'categorias': categorias})
+    return render(request, 'webapp/productos.html', context )
 
 def profesionales(request):
     

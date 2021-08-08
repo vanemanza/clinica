@@ -33,3 +33,42 @@ Traceback (most recent call last):
     for model in model_or_iterable:
 TypeError: 'MediaDefiningClass' object is not iterable
 """
+
+Quiero agregar una casilla de busqueda en la tabla y cuando lo hago de esta forma me 
+sale el siguiente error:
+
+from django.contrib import admin
+from .models import*
+
+
+class ProductosAdmin(admin.ModelAdmin):
+    list_display=("nombre", "precio", "stock")
+    search_fields=("nombre", "categorias")
+
+admin.site.register(Categoria)
+admin.site.register(Productos, ProductosAdmin )
+admin.site.register(Pedidos)
+
+FieldError at /admin/pedidos/productos/
+Related Field got invalid lookup: icontains
+Request Method:	GET
+Request URL:	http://127.0.0.1:8000/admin/pedidos/productos/?q=pelota
+Django Version:	2.2.4
+Exception Type:	FieldError
+Exception Value:	
+Related Field got invalid lookup: icontains
+Exception Location:	C:\Users\usuario\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py in build_lookup, line 1107
+Python Executable:	C:\Users\usuario\AppData\Local\Programs\Python\Python39\python.exe
+Python Version:	3.9.5
+Python Path:	
+['C:\\repositorios\\clinica',
+ 'C:\\Users\\usuario\\AppData\\Local\\Programs\\Python\\Python39\\python39.zip',
+ 'C:\\Users\\usuario\\AppData\\Local\\Programs\\Python\\Python39\\DLLs',
+ 'C:\\Users\\usuario\\AppData\\Local\\Programs\\Python\\Python39\\lib',
+ 'C:\\Users\\usuario\\AppData\\Local\\Programs\\Python\\Python39',
+ 'C:\\Users\\usuario\\AppData\\Roaming\\Python\\Python39\\site-packages',
+ 'C:\\Users\\usuario\\AppData\\Roaming\\Python\\Python39\\site-packages\\win32',
+ 'C:\\Users\\usuario\\AppData\\Roaming\\Python\\Python39\\site-packages\\win32\\lib',
+ 'C:\\Users\\usuario\\AppData\\Roaming\\Python\\Python39\\site-packages\\Pythonwin',
+ 'C:\\Users\\usuario\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages']
+Server time:	Sun, 8 Aug 2021 18:44:33 +0000

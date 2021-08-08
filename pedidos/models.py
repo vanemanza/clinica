@@ -12,21 +12,22 @@ class Categoria(models.Model):
     ('accesorios', 'accesorios'),
     )
 
-    tipos = models.CharField(max_length=20, choices=TIPOS, verbose_name="categorias")
-   
+    tipo = models.CharField(max_length=20, choices=TIPOS, verbose_name="categorias")
+    imagen = models.ImageField(upload_to='pedidos', null=True, blank=True) 
     class Meta:
 
         verbose_name="categoria"
         verbose_name_plural = "categorias"
 
     def __str__(self):
-        return self.tipos
+        return self.tipo
 
 class Productos(models.Model):
     
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50, verbose_name="Artículo")
+    detalles = models.TextField(blank=True, null=True)
     categorias = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True)
-    imagen = models.ImageField(upload_to="pedidos", null=True, blank=True)   
+    imagen = models.ImageField(upload_to='pedidos', null=True, blank=True)   
     precio = models.FloatField()    
     stock = models.IntegerField(default=1, null=True)
 

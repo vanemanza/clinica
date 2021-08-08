@@ -6,23 +6,21 @@
 
 <div class="container ">
     <div class="row">
-    {% for categoria in categorias %}  
-    <div class="card mx-20 " style="width: 20rem; margin:20px auto;">
-        <img src="{% static 'img/armazones.png' %}" class="card-img-top" alt="armazones" style="margin:5px auto; border-radius: 5px;">
+    {% for producto in productos %}     
+        
+    <div class="card " style="width:25%; margin: 10px auto;">
+        <img src="{{producto.imagen.url}}" class="card-img-top" alt="" style="margin:5px auto; border-radius: 5px;">
         <div class="card-body">
-          <h5 class="card-title">{{categoria}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <p class="card-text">{{producto.detalles}}</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
+               
         <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="#" class="card-link">{{producto.categorias}}</a>
+          <a href="#" class="card-link">+ info</a>
         </div>
       </div>
+     
      {% endfor %} 
     </div>
 </div>
