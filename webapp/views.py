@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from pedidos.models import Productos, Categoria
+from pedidos.models import Producto, Categoria
 
 def home(request):
 
@@ -11,7 +11,7 @@ def servicios(request):
 
 def productos(request):
     categorias = Categoria.objects.all()
-    productos = Productos.objects.all()
+    productos = Producto.objects.all()
 
     context = {'categorias': categorias, 'productos': productos}
     

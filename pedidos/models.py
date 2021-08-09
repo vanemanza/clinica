@@ -22,7 +22,7 @@ class Categoria(models.Model):
     def __str__(self):
         return self.tipo
 
-class Productos(models.Model):
+class Producto(models.Model):
     
     nombre = models.CharField(max_length=50, verbose_name="Artículo")
     detalles = models.TextField(blank=True, null=True)
@@ -58,7 +58,7 @@ class Pedidos(models.Model):
 
     paciente = models.ForeignKey(Pacientes, on_delete=models.CASCADE)   
     vendedor = models.ForeignKey(User, on_delete=models.CASCADE)
-    producto = models.ForeignKey(Productos, on_delete=models.CASCADE) 
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE) 
     precio = models.FloatField()
     cantidad = models.IntegerField()    
     forma_pago = models.CharField(max_length=20, default='tarjeta', choices=FORMAS_PAGO,
