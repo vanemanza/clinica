@@ -17,6 +17,12 @@ def productos(request):
     
     return render(request, 'webapp/productos.html', context )
 
+def categorias(request):
+   
+    
+    return render(request, "webapp/categorias.html", {})
+
+
 def profesionales(request):
     
     return render(request, 'webapp/profesionales.html', {})
